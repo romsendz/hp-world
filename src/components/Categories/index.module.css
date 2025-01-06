@@ -1,0 +1,18 @@
+.categories {
+  margin-top: 24px;
+  display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.category__button {
+  margin: 0 40px;
+}
