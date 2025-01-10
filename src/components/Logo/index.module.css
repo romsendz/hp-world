@@ -1,0 +1,23 @@
+a.logo {
+  white-space: nowrap;
+  text-align: center;
+  color: var(--color-logo);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    var(--color-logo) 50%,
+    var(--color-logo-hover) 50%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background-position 0.2s ease-in-out;
+  font-size: 3em;
+}
+
+a.logo:hover {
+  background-position: -100% 0;
+}
