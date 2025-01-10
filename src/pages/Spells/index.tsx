@@ -1,11 +1,11 @@
 import Title from "../../components/Title";
 
-const Houses = () => {
+const Spells = () => {
   return (
     <>
-      <Title>Houses</Title>
+      <Title>Spells</Title>
     </>
   );
 };
 
-export default Houses;
+export default Spells;

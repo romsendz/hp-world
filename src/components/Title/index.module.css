@@ -1,7 +1,6 @@
 .title {
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 1.25;
-  color: #fabf59;
-  text-transform: uppercase;
+  margin: 1em 0;
+  font-size: 3em;
+  color: var(--color-text);
+  text-align: center;
 }

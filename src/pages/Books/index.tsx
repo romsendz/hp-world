@@ -1,11 +1,11 @@
 import Title from "../../components/Title";
 
-const Houses = () => {
+const Books = () => {
   return (
     <>
-      <Title>Houses</Title>
+      <Title>Books</Title>
     </>
   );
 };
 
-export default Houses;
+export default Books;
