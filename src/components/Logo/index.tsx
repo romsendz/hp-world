@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const Logo = () => {
   return (

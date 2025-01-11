@@ -1,7 +1,7 @@
 import useHousesQuery from "../../assets/api/queries/useHouses";
 import ErrorMessage from "../../layouts/ErrorMessage";
 import Loading from "../../layouts/Loading";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const HousesList = () => {
   const { data: houses, isLoading, isError, error } = useHousesQuery();

@@ -1,7 +1,7 @@
 import useCharactersQuery from "../../assets/api/queries/useCharacters";
 import ErrorMessage from "../../layouts/ErrorMessage";
 import Loading from "../../layouts/Loading";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const CharactersList = () => {
   const { data: characters, isLoading, isError, error } = useCharactersQuery();
@@ -15,7 +15,7 @@ const CharactersList = () => {
             <img
               src={character.image}
               alt={character.fullName}
-              className={styles.character__img}
+              className={styles.character__image}
             />
             <div className={styles.character__details}>
               <h2>{character.fullName}</h2>

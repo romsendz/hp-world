@@ -1,17 +1,8 @@
+@use "breakpoints";
+@use "colors";
 @import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
 
 :root {
-  /* colors */
-  --color-background: #1d1d1d;
-  --color-text: #fabf59;
-  --color-text-developer: #6c6161;
-  --color-link: #f3e2c5;
-  --color-link-hover: #f5b15f;
-  --color-error: #e74c3c;
-  --color-logo: var(--color-text);
-  --color-logo-hover: #f3daae;
-  --color-button-background: #f9b50c;
-  --color-button-border: var(--color-button-background);
 }
 
 #root {
@@ -26,10 +17,10 @@ html {
 
 body {
   font-family: "Rye", Arial, sans-serif;
-  color: var(--color-text);
+  color: colors.$text;
   margin: 0;
   padding: 0;
-  background-color: var(--color-background);
+  background-color: colors.$background;
 }
 
 h1,
@@ -49,15 +40,16 @@ ul {
 }
 
 img {
+  max-width: 100%;
   object-fit: cover;
 }
 
 a {
-  color: var(--color-link);
+  color: colors.$link;
   text-decoration: none;
 }
 a:hover {
-  color: var(--color-link-hover);
+  color: colors.$link-hover;
 }
 
 *,

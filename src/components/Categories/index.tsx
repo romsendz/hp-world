@@ -1,4 +1,4 @@
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 import booksImg from "../../assets/images/books.webp";
 import charactersImg from "../../assets/images/characters.webp";
 import housesImg from "../../assets/images/houses.webp";

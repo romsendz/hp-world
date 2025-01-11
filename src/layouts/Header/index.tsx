@@ -1,4 +1,4 @@
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 import Logo from "../../components/Logo";
 import Container from "../Container";
 import { Link } from "react-router";

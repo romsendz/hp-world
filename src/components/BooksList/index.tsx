@@ -1,7 +1,7 @@
 import useBooksQuery from "../../assets/api/queries/useBooks";
 import ErrorMessage from "../../layouts/ErrorMessage";
 import Loading from "../../layouts/Loading";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const BooksList = () => {
   const { data: books, isLoading, isError, error } = useBooksQuery();
@@ -15,7 +15,7 @@ const BooksList = () => {
             <img
               src={book.cover}
               alt={book.title}
-              className={styles.book__img}
+              className={styles.book__image}
             />
             <div className={styles.book__details}>
               <h2>{book.title}</h2>

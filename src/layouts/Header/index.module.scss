@@ -1,0 +1,23 @@
+@use "@/styles/breakpoints" as breakpoints;
+
+.header {
+  padding: 1em 3em;
+  border-bottom: 1px solid;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  @media (min-width: breakpoints.$mobile) {
+    flex-direction: row;
+  }
+  &__links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 4em;
+  }
+}

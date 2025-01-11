@@ -1,7 +1,7 @@
 import useSpellsQuery from "../../assets/api/queries/useSpells";
 import ErrorMessage from "../../layouts/ErrorMessage";
 import Loading from "../../layouts/Loading";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 
 const SpellsList = () => {
   const { data: spells, isLoading, isError, error } = useSpellsQuery();

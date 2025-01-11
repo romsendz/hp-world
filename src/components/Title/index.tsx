@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 import React from "react";
 
 type TitleProps = React.HTMLAttributes<HTMLHeadingElement>;
