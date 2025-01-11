@@ -1,38 +1,47 @@
-import { useNavigate } from "react-router";
-import Button from "../Button";
 import styles from "./index.module.css";
+import booksImg from "../../assets/images/books.webp";
+import charactersImg from "../../assets/images/characters.webp";
+import housesImg from "../../assets/images/houses.webp";
+import spellsImg from "../../assets/images/spells.webp";
+import { Link } from "react-router";
+
+const CATEGORIES = [
+  {
+    path: "/books",
+    image: booksImg,
+  },
+  {
+    path: "/characters",
+    image: charactersImg,
+  },
+  {
+    path: "/houses",
+    image: housesImg,
+  },
+  {
+    path: "/spells",
+    image: spellsImg,
+  },
+];
 
 const Categories = () => {
-  const navigate = useNavigate();
   return (
     <div className={styles.categories}>
-      <article className={styles.category}>
-        <img src="./images/students.png" alt="students" />
-        <Button
-          className={styles.category__button}
-          onClick={() => navigate("/students")}
-        >
-          Students
-        </Button>
-      </article>
-      <article className={styles.category}>
-        <img src="./images/staff.png" alt="staff" />
-        <Button
-          className={styles.category__button}
-          onClick={() => navigate("/students")}
-        >
-          Staff
-        </Button>
-      </article>
-      <article className={styles.category}>
-        <img src="./images/houses.png" alt="houses" />
-        <Button
-          className={styles.category__button}
-          onClick={() => navigate("/students")}
-        >
-          Houses
-        </Button>
-      </article>
+      {CATEGORIES.map((category) => {
+        return (
+          <Link
+            key={category.path}
+            className={styles.category}
+            to={category.path}
+          >
+            <img
+              src={category.image}
+              alt={category.path}
+              className={styles.category__image}
+            />
+          </Link>
+        );
+      })}
     </div>
   );
 };
