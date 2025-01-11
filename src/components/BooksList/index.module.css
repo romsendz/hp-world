@@ -1,0 +1,21 @@
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.book {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.book__img {
+  max-width: 20em;
+  width: 100%;
+  height: auto;
+}
+
+.book__details {
+  flex: 1;
+}
