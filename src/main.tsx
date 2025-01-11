@@ -5,6 +5,7 @@ import "./index.css";
 import Home from "./pages/Home/index.tsx";
 import Houses from "./pages/Houses/index.tsx";
 import NotFound from "./pages/NotFound/index.tsx";
+import Layout from "./layouts/Layout/index.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Books from "./pages/Books/index.tsx";
 import Characters from "./pages/Characters/index.tsx";
@@ -21,19 +22,19 @@ const queryClient = new QueryClient({
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <Container>
-        <Routes>
-          <Route index element={<Home />} />
+      <BrowserRouter>
+        <Layout>
+          <Routes>
+            <Route index element={<Home />} />
             <Route path="books" element={<Books />} />
             <Route path="characters" element={<Characters />} />
-          <Route path="houses" element={<Houses />} />
+            <Route path="houses" element={<Houses />} />
             <Route path="spells" element={<Spells />} />
-          {/* 404 Page */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Container>
-    </BrowserRouter>
+            {/* 404 Page */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
     </QueryClientProvider>
   </StrictMode>
 );

@@ -1,0 +1,11 @@
+.footer {
+  padding: 1em 3em;
+  color: var(--color-text-developer);
+  text-align: center;
+}
+
+.credits {
+  display: inline-block;
+  margin: auto;
+  font-size: 0.75em;
+}

@@ -1,12 +1,16 @@
-import styles from "./index.module.css";
-import React from "react";
+// Desc: Container layout component
 
-type ContainerProps = {
-  children: React.ReactNode; // Specify children as the only prop
-};
+interface ContainerProps {
+  children: React.ReactNode;
+  maxWidth: string;
+}
 
-const Container: React.FC<ContainerProps> = ({ children }) => {
-  return <div className={styles.container}>{children}</div>;
+const Container = ({ children, maxWidth }: ContainerProps) => {
+  return (
+    <div style={{ margin: "0 auto", width: "100%", maxWidth: maxWidth }}>
+      {children}
+    </div>
+  );
 };
 
 export default Container;
