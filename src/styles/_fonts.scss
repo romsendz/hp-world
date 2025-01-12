@@ -2,7 +2,6 @@
 
 html {
   /* Global font-size for text. Base size scales fluidly. 
-  Font sizes from h1-h6, p are defined in <Typography> 
   https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
   font-size: clamp(12px, 1vw, 16px);
 }
