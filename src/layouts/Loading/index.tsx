@@ -1,5 +1,5 @@
 const Loading = () => {
-  return <h3 style={{ textAlign: "center" }}>Loading...</h3>;
+  return <p style={{ textAlign: "center" }}>Loading...</p>;
 };
 
 export default Loading;
