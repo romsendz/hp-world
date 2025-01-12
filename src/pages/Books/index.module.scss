@@ -1,0 +1,70 @@
+@use "@/styles/breakpoints" as breakpoints;
+
+.books {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.book {
+  border: 2px solid #000000;
+  border-radius: 1em;
+  background-color: rgb(97, 88, 78);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  @media (min-width: breakpoints.$desktop) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2em;
+  }
+
+  &__title {
+    display: block;
+    @media (min-width: breakpoints.$desktop) {
+      display: none;
+    }
+  }
+  &__image {
+    max-width: 10em;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+    transition: transform 0.3s ease;
+    @media (min-width: breakpoints.$desktop) {
+      max-width: 20em;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__details {
+    flex: 1;
+    text-align: center;
+    @media (min-width: breakpoints.$desktop) {
+      text-align: start;
+    }
+    &__title {
+      display: none;
+      @media (min-width: breakpoints.$desktop) {
+        display: block;
+      }
+    }
+    &__divider {
+      display: none;
+      @media (min-width: breakpoints.$desktop) {
+        display: block;
+      }
+    }
+    &__description {
+      margin-bottom: 0.5em;
+      @media (min-width: breakpoints.$desktop) {
+        margin-bottom: inherit;
+      }
+    }
+  }
+}

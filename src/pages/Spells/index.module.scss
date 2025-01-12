@@ -1,0 +1,15 @@
+.spells {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  font-size: 2rem;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}

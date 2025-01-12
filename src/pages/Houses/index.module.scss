@@ -1,0 +1,9 @@
+.houses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  row-gap: 4em;
+  column-gap: 2em;
+  text-align: center;
+}
