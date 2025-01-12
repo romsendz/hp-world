@@ -1,0 +1,9 @@
+@use "@/styles/breakpoints" as breakpoints;
+
+.main {
+  flex: 1;
+  padding: 4em 3em;
+  @media (min-width: breakpoints.$desktop) {
+    padding: 6em 5em;
+  }
+}

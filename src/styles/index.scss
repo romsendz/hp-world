@@ -1,0 +1,99 @@
+@use "breakpoints";
+@use "colors";
+@use "fonts";
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+
+:root {
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: breakpoints.$desktop) {
+    min-height: 100vh;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: colors.$text;
+  margin: 0;
+  padding: 0;
+  background: colors.$background;
+  background: linear-gradient(
+    135deg,
+    #1e1e1e 0%,
+    #2b2a2e 30%,
+    #4d3f39 60%,
+    #0f0f0f 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  @media (min-width: breakpoints.$desktop) {
+    background: linear-gradient(
+        180deg,
+        rgba(29, 29, 29, 0.75) 0%,
+        rgba(29, 29, 29, 0.9) 40%,
+        rgba(29, 29, 29, 0.9) 60%,
+        rgba(29, 29, 29, 1) 100%
+      ),
+      url("/images/bg-home.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  color: colors.$link;
+  text-decoration: none;
+}
+a:hover {
+  color: colors.$link-hover;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

@@ -1,7 +1,7 @@
 import Container from "../Container";
 import Footer from "../Footer";
 import Header from "../Header";
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 import React from "react";
 
 type LayoutProps = {

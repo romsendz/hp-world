@@ -1,0 +1,41 @@
+@use "@/styles/breakpoints" as breakpoints;
+@use "@/styles/colors" as colors;
+
+.header {
+  padding: 0.5em 1.5em;
+  border-bottom: 1px solid;
+  @media (min-width: breakpoints.$desktop) {
+    padding: 1em 3em;
+  }
+  &__content {
+    display: grid;
+    grid-template-areas:
+      "logo language"
+      "nav nav";
+    align-items: center;
+    row-gap: 1em;
+    @media (min-width: breakpoints.$desktop) {
+      grid-template-areas: "logo nav language";
+    }
+  }
+}
+
+.nav {
+  grid-area: nav;
+  justify-self: center;
+  padding: 1em 0;
+  &__links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    @media (min-width: breakpoints.$desktop) {
+      gap: 4em;
+    }
+  }
+  &__link {
+    &--active {
+      color: colors.$link-active;
+    }
+  }
+}
