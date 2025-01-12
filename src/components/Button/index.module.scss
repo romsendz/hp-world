@@ -2,11 +2,11 @@
 
 .button {
   font-family: inherit;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.25;
-  padding: 18px 36px;
+  padding: 1em 2em;
   background-color: colors.$button-background;
-  border-radius: 100px;
+  border-radius: 6em;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.15s;
