@@ -18,7 +18,7 @@ const Characters = () => {
               className={styles.character__image}
             />
             <div className={styles.character__details}>
-              <h6>{character.fullName}</h6>
+              <h5>{character.fullName}</h5>
               <br />
               <ul>
                 <li>

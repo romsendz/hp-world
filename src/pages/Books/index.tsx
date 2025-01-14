@@ -12,7 +12,7 @@ const Books = () => {
       {books?.map((book) => {
         return (
           <article key={book.index} className={styles.book}>
-            <h5 className={styles.book__title}>{book.title}</h5>
+            <h4 className={styles.book__title}>{book.title}</h4>
             <img
               src={book.cover}
               alt={book.title}

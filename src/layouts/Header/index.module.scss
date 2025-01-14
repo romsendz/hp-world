@@ -2,8 +2,8 @@
 @use "@/styles/colors" as colors;
 
 .header {
-  padding: 0.5em 1.5em;
-  border-bottom: 1px solid;
+  padding: 1.5em 1.5em 0.5em 1.5em;
+  outline: 0.1em rgb(199, 211, 147) solid;
   @media (min-width: breakpoints.$desktop) {
     padding: 1em 3em;
   }
@@ -13,7 +13,6 @@
       "logo language"
       "nav nav";
     align-items: center;
-    row-gap: 1em;
     @media (min-width: breakpoints.$desktop) {
       grid-template-areas: "logo nav language";
     }
@@ -22,20 +21,38 @@
 
 .nav {
   grid-area: nav;
-  justify-self: center;
-  padding: 1em 0;
-  &__links {
+  justify-self: stretch;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  @media (min-width: breakpoints.$desktop) {
+    justify-self: center;
+    border: none;
+  }
+  &__list {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
-    gap: 1em;
+    justify-content: space-evenly;
     @media (min-width: breakpoints.$desktop) {
       gap: 4em;
     }
-  }
-  &__link {
-    &--active {
-      color: colors.$link-active;
+    &__item {
+      padding: 0.5em;
+      flex-basis: 25%;
+      text-align: center;
+      background-color: transparent;
+      &>a {
+        display: block;
+      }
+      &:has([aria-current="page"]) {
+        background-color: colors.$link-hover;
+        &>a {
+          color:  colors.$text-dark;
+        }
+      }
+      @media (min-width: breakpoints.$desktop) {
+        flex-basis: initial;
+        padding: 0.25em;
+      }
     }
   }
 }

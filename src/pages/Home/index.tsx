@@ -35,7 +35,7 @@ const Home = () => {
         <h1 className={styles.hero__title}>
           Welcome to the Harry Potter World!
         </h1>
-        <p>Explore the categories below:</p>
+        <h5>Explore the categories below:</h5>
       </div>
       <div className={styles.categories}>
         {CATEGORIES.map((category) => {

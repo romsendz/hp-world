@@ -15,6 +15,7 @@
     display: none;
     @media (min-width: breakpoints.$desktop) {
       display: block;
+      margin-bottom: 0.5em;
     }
   }
 }
@@ -27,15 +28,14 @@
 
 .category {
   flex: 1 0 calc(50% - 2em);
-  @media (min-width: breakpoints.$desktop) {
-    flex: 1 0 calc(25% - 2em);
-  }
   border-radius: 20px;
   cursor: pointer;
   position: relative;
   transition: transform 0.3s ease;
   overflow: hidden;
-
+  @media (min-width: breakpoints.$desktop) {
+    flex: 1 0 calc(25% - 2em);
+  }
   &:hover {
     transform: scale(1.1);
     &::after {
