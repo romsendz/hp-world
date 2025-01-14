@@ -4,11 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3em;
+  gap: 2em;
 }
 
 .character {
-  flex: 1 0 calc(100% / 2 - 3em);
   position: relative;
   transition: transform ease-in 0.2s;
   border-radius: 1em;
@@ -44,9 +43,6 @@
     right: 1em;
     left: 1em;
     text-align: center;
-    font-size: 0.5rem;
-    @media (min-width: breakpoints.$desktop) {
-      font-size: 1rem;
-    }
+    
   }
 }
