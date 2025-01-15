@@ -1,0 +1,20 @@
+{
+  "header": {
+    "books": "Книги",
+    "characters": "Персонажі",
+    "houses": "Гуртожитки",
+    "spells": "Заклинання"
+  },
+  "welcomeToTheHarryPotterWorld": "Ласкаво просимо до світу Гаррі Поттера!",
+  "exploreTheCategoriesBelow": "Досліджуйте категорії нижче",
+  "readMore": "Читати далі",
+  "releaseDate": "Дата релізу",
+  "numberOfPages": "Кількість сторінок",
+  "house": "Гуртожиток",
+  "birthDate": "Дата народження",
+  "foundedBy": "Засновано",
+  "symbol": "Символ",
+  "colors": "Кольори",
+  "spell": "Заклинання",
+  "action": "Дія"
+}

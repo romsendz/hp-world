@@ -1,0 +1,20 @@
+{
+  "header": {
+    "books": "Libri",
+    "characters": "Personaggi",
+    "houses": "Case",
+    "spells": "Incantesimi"
+  },
+  "welcomeToTheHarryPotterWorld": "Benvenuti nel mondo di Harry Potter!",
+  "exploreTheCategoriesBelow": "Esplora le categorie qui sotto",
+  "readMore": "Leggi di più",
+  "releaseDate": "Data di rilascio",
+  "numberOfPages": "Numero di pagine",
+  "house": "Casa",
+  "birthDate": "Data di nascita",
+  "foundedBy": "Fondato da",
+  "symbol": "Simbolo",
+  "colors": "Colori",
+  "spell": "Incantesimo",
+  "action": "Azione"
+}

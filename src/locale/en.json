@@ -1,0 +1,20 @@
+{
+  "header": {
+    "books": "Books",
+    "characters": "Characters",
+    "houses": "Houses",
+    "spells": "Spells"
+  },
+  "welcomeToTheHarryPotterWorld": "Welcome to the Harry Potter World!",
+  "exploreTheCategoriesBelow": "Explore the categories below",
+  "readMore": "Read more",
+  "releaseDate": "Release Date",
+  "numberOfPages": "Number of Pages",
+  "house": "House",
+  "birthDate": "Birth date",
+  "foundedBy": "Founded by",
+  "symbol": "Symbol",
+  "colors": "Colors",
+  "spell": "Spell",
+  "action": "Action"
+}

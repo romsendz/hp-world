@@ -1,0 +1,20 @@
+{
+  "header": {
+    "books": "Libros",
+    "characters": "Personajes",
+    "houses": "Casas",
+    "spells": "Hechizos"
+  },
+  "welcomeToTheHarryPotterWorld": "¡Bienvenido al mundo de Harry Potter!",
+  "exploreTheCategoriesBelow": "Explora las categorías a continuación",
+  "readMore": "Leer más",
+  "releaseDate": "Fecha de lanzamiento",
+  "numberOfPages": "Número de páginas",
+  "house": "Casa",
+  "birthDate": "Fecha de nacimiento",
+  "foundedBy": "Fundado por",
+  "symbol": "Símbolo",
+  "colors": "Colores",
+  "spell": "Hechizo",
+  "action": "Acción"
+}
