@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
 // size scales fluidly. https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
-
 html {
   /* Global font-size for text. Base size scales fluidly. 
   https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
@@ -7,7 +8,7 @@ html {
 }
 
 body {
-  font-family: "Rye", Arial, sans-serif;
+  font-family: "Rye", "Pangolin", Arial, sans-serif;
   line-height: 1.8;
 }
 
