@@ -20,6 +20,9 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
+      placeholderData: keepPreviousData,
+      staleTime: 5 * 1000 * 60, // Data is considered fresh for 5 minutes
+      gcTime: 10 * 1000 * 60, // Unused data is garbage collected after 10 minutes
     },
   },
 });
