@@ -15,6 +15,8 @@ import Books from "./pages/Books/index.tsx";
 import Characters from "./pages/Characters/index.tsx";
 import Spells from "./pages/Spells/index.tsx";
 import { PotterApiProvider } from "./context/PotterAPI/index.tsx";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./locale/i18n";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const queryClient = new QueryClient({
@@ -32,19 +34,21 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <PotterApiProvider>
-      <BrowserRouter basename="/hp-world">
-        <Layout>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="books" element={<Books />} />
-            <Route path="characters" element={<Characters />} />
-            <Route path="houses" element={<Houses />} />
-            <Route path="spells" element={<Spells />} />
-            {/* 404 Page */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
+        <I18nextProvider i18n={i18n}>
+          <BrowserRouter basename="/hp-world">
+            <Layout>
+              <Routes>
+                <Route index element={<Home />} />
+                <Route path="books" element={<Books />} />
+                <Route path="characters" element={<Characters />} />
+                <Route path="houses" element={<Houses />} />
+                <Route path="spells" element={<Spells />} />
+                {/* 404 Page */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Layout>
+          </BrowserRouter>
+        </I18nextProvider>
       </PotterApiProvider>
       <ReactQueryDevtools
         initialIsOpen={false}
