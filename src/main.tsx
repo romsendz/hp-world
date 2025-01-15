@@ -6,10 +6,15 @@ import Home from "./pages/Home/index.tsx";
 import Houses from "./pages/Houses/index.tsx";
 import NotFound from "./pages/NotFound/index.tsx";
 import Layout from "./layouts/Layout/index.tsx";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+  keepPreviousData,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
 import Books from "./pages/Books/index.tsx";
 import Characters from "./pages/Characters/index.tsx";
 import Spells from "./pages/Spells/index.tsx";
+import { PotterApiProvider } from "./context/PotterAPI/index.tsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,6 +27,7 @@ const queryClient = new QueryClient({
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
+      <PotterApiProvider>
       <BrowserRouter basename="/hp-world">
         <Layout>
           <Routes>
@@ -35,6 +41,7 @@ createRoot(document.getElementById("root")!).render(
           </Routes>
         </Layout>
       </BrowserRouter>
+      </PotterApiProvider>
     </QueryClientProvider>
   </StrictMode>
 );

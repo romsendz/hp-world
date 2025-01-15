@@ -1,4 +1,4 @@
-const BASE_URL = `https://potterapi-fedeperin.vercel.app/en`;
+const BASE_URL = `https://potterapi-fedeperin.vercel.app`;
 
 const fetcher = async (url: string, options?: RequestInit) => {
   const response = await fetch(`${BASE_URL}${url}`, {
