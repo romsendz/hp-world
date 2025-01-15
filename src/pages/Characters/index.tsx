@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import useCharactersQuery from "../../assets/api/queries/useCharacters";
 import ErrorMessage from "../../layouts/ErrorMessage";
 import Loading from "../../layouts/Loading";
@@ -5,6 +6,7 @@ import styles from "./index.module.scss";
 
 const Characters = () => {
   const { data: characters, isLoading, isError, error } = useCharactersQuery();
+  const { t } = useTranslation();
   if (isLoading) return <Loading />;
   if (isError) return <ErrorMessage error={error} />;
   return (
@@ -22,7 +24,7 @@ const Characters = () => {
               <br />
               <ul>
                 <li>
-                  House:<b> {character.hogwartsHouse}</b>
+                  {t("house")}:<b> {character.hogwartsHouse}</b>
                 </li>
                 <li>
                   Birth date: <b>{character.birthdate}</b>

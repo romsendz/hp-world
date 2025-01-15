@@ -2,31 +2,25 @@ import styles from "./index.module.scss";
 import Logo from "../../components/Logo";
 import Container from "../Container";
 import { NavLink, useLocation } from "react-router";
+import LanguageDrowdown from "../../components/LanguageDropdown";
+import { useTranslation } from "react-i18next";
 
 const Navigation = () => {
-  
+  const { t } = useTranslation();
   return (
     <nav className={styles.nav}>
       <ul className={styles.nav__list}>
         <li className={styles.nav__list__item}>
-          <NavLink to="/books">
-            Books
-          </NavLink>
+          <NavLink to="/books">{t("header.books")}</NavLink>
         </li>
         <li className={styles.nav__list__item}>
-          <NavLink to="/characters">
-            Characters
-          </NavLink>
+          <NavLink to="/characters">{t("header.characters")}</NavLink>
         </li>
         <li className={styles.nav__list__item}>
-          <NavLink to="/houses">
-            Houses
-          </NavLink>
+          <NavLink to="/houses">{t("header.houses")}</NavLink>
         </li>
         <li className={styles.nav__list__item}>
-          <NavLink to="/spells">
-            Spells
-          </NavLink>
+          <NavLink to="/spells">{t("header.spells")}</NavLink>
         </li>
       </ul>
     </nav>
@@ -37,7 +31,7 @@ const Header = () => {
   const { pathname } = useLocation();
   const isHomePage = pathname === "/";
 
-  const headerContentStyles = {rowGap: isHomePage ? "0" : "1em"};
+  const headerContentStyles = { rowGap: isHomePage ? "0" : "1em" };
 
   return (
     <header className={styles.header}>
@@ -49,7 +43,7 @@ const Header = () => {
             style={{ gridArea: "language", justifySelf: "end" }}
             className="language"
           >
-            LANG
+            <LanguageDrowdown />
           </p>
         </div>
       </Container>

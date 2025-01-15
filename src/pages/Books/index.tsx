@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import useBooksQuery from "../../assets/api/queries/useBooks";
 import ErrorMessage from "../../layouts/ErrorMessage";
 import Loading from "../../layouts/Loading";
@@ -5,6 +6,9 @@ import styles from "./index.module.scss";
 
 const Books = () => {
   const { data: books, isLoading, isError, error } = useBooksQuery();
+
+  const { t } = useTranslation();
+
   if (isLoading) return <Loading />;
   if (isError) return <ErrorMessage error={error} />;
   return (
@@ -30,7 +34,7 @@ const Books = () => {
                   Release Date:<b> {book.releaseDate}</b>
                 </li>
                 <li>
-                  Number of pages: <b>{book.pages}</b>
+                  {t("numberOfPages")}: <b>{book.pages}</b>
                 </li>
               </ul>
             </div>

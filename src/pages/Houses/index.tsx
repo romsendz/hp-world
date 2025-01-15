@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import useHousesQuery from "../../assets/api/queries/useHouses";
 import ErrorMessage from "../../layouts/ErrorMessage";
 import Loading from "../../layouts/Loading";
@@ -5,6 +6,7 @@ import styles from "./index.module.scss";
 
 const Houses = () => {
   const { data: houses, isLoading, isError, error } = useHousesQuery();
+  const { t } = useTranslation();
   if (isLoading) return <Loading />;
   if (isError) return <ErrorMessage error={error} />;
   return (
@@ -16,15 +18,14 @@ const Houses = () => {
             <br />
             <ul>
               <li>
-                Founder:<b> {house.founder}</b>
+                {t("foundedBy")}:<b> {house.founder}</b>
               </li>
               <li>
-                Animal:
-                <b> {house.animal} </b>
+                {t("symbol")}:<b> {house.animal} </b>
                 <span>{house.emoji}</span>
               </li>
               <li>
-                Colors:<b> {house.colors.join(", ")}</b>
+                {t("colors")}:<b> {house.colors.join(", ")}</b>
               </li>
             </ul>
           </article>

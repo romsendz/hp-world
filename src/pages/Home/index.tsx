@@ -4,6 +4,7 @@ import charactersImg from "../../assets/images/characters.webp";
 import housesImg from "../../assets/images/houses.webp";
 import spellsImg from "../../assets/images/spells.webp";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 const CATEGORIES = [
   {
@@ -29,13 +30,14 @@ const CATEGORIES = [
 ];
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className={styles.hero}>
         <h1 className={styles.hero__title}>
-          Welcome to the Harry Potter World!
+          {t("welcomeToTheHarryPotterWorld")}
         </h1>
-        <h5>Explore the categories below:</h5>
+        <h5>{t("exploreTheCategoriesBelow")}:</h5>
       </div>
       <div className={styles.categories}>
         {CATEGORIES.map((category) => {
@@ -44,6 +46,7 @@ const Home = () => {
               key={category.path}
               className={styles.category}
               to={category.path}
+              data-label={t("readMore")}
             >
               <h2 className="sr-only">{category.name}</h2>
               <img
