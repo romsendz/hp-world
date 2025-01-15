@@ -3,10 +3,12 @@ import useCharactersQuery from "../../assets/api/queries/useCharacters";
 import ErrorMessage from "../../layouts/ErrorMessage";
 import Loading from "../../layouts/Loading";
 import styles from "./index.module.scss";
+import useLocalizer from "../../locale/hooks/useLocalizer";
 
 const Characters = () => {
   const { data: characters, isLoading, isError, error } = useCharactersQuery();
   const { t } = useTranslation();
+  const { localize } = useLocalizer();
   if (isLoading) return <Loading />;
   if (isError) return <ErrorMessage error={error} />;
   return (
@@ -27,7 +29,7 @@ const Characters = () => {
                   {t("house")}:<b> {character.hogwartsHouse}</b>
                 </li>
                 <li>
-                  Birth date: <b>{character.birthdate}</b>
+                  {t("birthDate")}: <b>{localize(character.birthdate)}</b>
                 </li>
               </ul>
             </div>
