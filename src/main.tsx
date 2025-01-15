@@ -15,6 +15,7 @@ import Books from "./pages/Books/index.tsx";
 import Characters from "./pages/Characters/index.tsx";
 import Spells from "./pages/Spells/index.tsx";
 import { PotterApiProvider } from "./context/PotterAPI/index.tsx";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -45,6 +46,10 @@ createRoot(document.getElementById("root")!).render(
         </Layout>
       </BrowserRouter>
       </PotterApiProvider>
+      <ReactQueryDevtools
+        initialIsOpen={false}
+        buttonPosition={"bottom-left"}
+      />
     </QueryClientProvider>
   </StrictMode>
 );
