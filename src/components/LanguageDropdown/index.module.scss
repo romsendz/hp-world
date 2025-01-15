@@ -1,0 +1,15 @@
+@use "@/styles/breakpoints" as breakpoints;
+@use "@/styles/colors" as colors;
+
+.language {
+  cursor: pointer;
+  color: colors.$logo;
+  background-color: transparent;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  border: 1px solid colors.$logo;
+  &__option {
+    color: colors.$logo;
+    background-color: colors.$background;
+  }
+}

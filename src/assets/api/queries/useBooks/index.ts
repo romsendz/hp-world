@@ -1,16 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
 import Book from "./type";
 import fetcher from "../../fetcher";
-
-const QUERY_KEY = [`books`];
-const REQUEST_URL = `/books`;
-
-const getBooks = async (): Promise<Book[]> => {
-  return fetcher(REQUEST_URL);
-};
+import useLanguageListener from "../../../../locale/hooks/useLanguageListener";
 
 const useBooksQuery = () => {
-  return useQuery<Book[]>({ queryKey: QUERY_KEY, queryFn: getBooks });
+  const language = useLanguageListener();
+
+  const QUERY_KEY = [language, `books`];
+  const REQUEST_URL = `/${language}/books`;
+
+  const getBooks = async (): Promise<Book[]> => {
+    return fetcher(REQUEST_URL);
+  };
+
+  return useQuery<Book[]>({
+    queryKey: QUERY_KEY,
+    queryFn: getBooks,
+  });
 };
 
 export default useBooksQuery;
