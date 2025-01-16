@@ -40,13 +40,13 @@
       flex-basis: 25%;
       text-align: center;
       background-color: transparent;
-      &>a {
+      & > a {
         display: block;
       }
       &:has([aria-current="page"]) {
         background-color: colors.$link-hover;
-        &>a {
-          color:  colors.$text-dark;
+        & > a {
+          color: colors.$text-dark;
         }
       }
       @media (min-width: breakpoints.$desktop) {
