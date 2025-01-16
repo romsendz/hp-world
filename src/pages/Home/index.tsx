@@ -5,6 +5,7 @@ import housesImg from "../../assets/images/houses.webp";
 import spellsImg from "../../assets/images/spells.webp";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const CATEGORIES = [
   {
@@ -31,10 +32,17 @@ const CATEGORIES = [
 
 const Home = () => {
   const { t } = useTranslation();
+  const currentLanguage = i18next.language; // TO BE DELETED
+  console.log(currentLanguage); // TO BE DELETED
+
   return (
     <>
       <div className={styles.hero}>
         <h1 className={styles.hero__title}>
+          {/* TO BE DELETED */}
+          CURR LANG: {currentLanguage}
+          <br />
+          {/* TO BE DELETED */}
           {t("welcomeToTheHarryPotterWorld")}
         </h1>
         <h5>{t("exploreTheCategoriesBelow")}:</h5>
