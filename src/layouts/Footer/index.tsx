@@ -1,3 +1,4 @@
+import GithubLogo from "../../assets/svgs/github.svg?react";
 import Container from "../Container";
 import styles from "./index.module.scss";
 
@@ -11,7 +12,8 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          (ICON) Credits
+          <GithubLogo width={"1.5em"} />
+          Credits
         </a>
       </Container>
     </footer>
