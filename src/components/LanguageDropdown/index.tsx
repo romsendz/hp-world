@@ -1,11 +1,11 @@
-import { usePotterBaseApi } from "../../context/PotterAPI/usePotterBaseApi";
+import i18next from "i18next";
 import styles from "./index.module.scss";
 import { useTranslation } from "react-i18next";
 
 const LanguageDrowdown = () => {
-  const { languages } = usePotterBaseApi();
+  const resources = i18next.options.resources || {};
+  const languages = Object.keys(resources);
   const { i18n } = useTranslation();
-
   return (
     <select
       className={styles.language}
