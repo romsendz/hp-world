@@ -29,6 +29,8 @@ i18next
       order: ["localStorage", "navigator"], // Detect from localStorage first, then browser
       caches: ["localStorage"], // Persist in localStorage
     },
+    supportedLngs: ["en", "fr", "uk", "es", "it", "pt"], // Only these languages are supported
+    load: "languageOnly", // Normalize detected language codes to base language (e.g., 'en-GB' -> 'en')
   });
 
 export default i18next;
