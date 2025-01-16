@@ -1,18 +1,22 @@
 import { useState, useEffect } from "react";
-import i18n from "i18next";
+import i18next from "i18next";
 
 const useLanguageListener = (): string => {
-  const [language, setLanguage] = useState(i18n.language); // Initialize with the current language
+  // Initialize with the normalized language
+  const [language, setLanguage] = useState<string>(
+    i18next.resolvedLanguage || "en"
+  );
 
   useEffect(() => {
-    const handleLanguageChange = (lng: string) => {
-      setLanguage(lng); // Update state when language changes
+    const handleLanguageChange = () => {
+      // Update the state with the resolved language whenever it changes
+      setLanguage(i18next.resolvedLanguage || "en");
     };
 
-    i18n.on("languageChanged", handleLanguageChange);
+    i18next.on("languageChanged", handleLanguageChange);
 
     return () => {
-      i18n.off("languageChanged", handleLanguageChange); // Cleanup listener
+      i18next.off("languageChanged", handleLanguageChange); // Cleanup listener
     };
   }, []);
 
