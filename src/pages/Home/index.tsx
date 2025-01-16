@@ -38,11 +38,11 @@ const Home = () => {
   return (
     <>
       <div className={styles.hero}>
+        {/* TO BE DELETED */}
+        CURR LANG: {currentLanguage}
+        <br />
+        {/* TO BE DELETED */}
         <h1 className={styles.hero__title}>
-          {/* TO BE DELETED */}
-          CURR LANG: {currentLanguage}
-          <br />
-          {/* TO BE DELETED */}
           {t("welcomeToTheHarryPotterWorld")}
         </h1>
         <h5>{t("exploreTheCategoriesBelow")}:</h5>
