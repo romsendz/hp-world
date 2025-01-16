@@ -1,0 +1,32 @@
+name: Lint Check
+
+on:
+  pull_request:
+    branches:
+      - main # Run on pull requests targeting the main branch
+  push:
+    branches:
+      - main # Optional: Run on every push to the main branch
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16" # Use the Node.js version matching your project
+
+      # Install dependencies
+      - name: Install Dependencies
+        run: npm ci
+
+      # Run the linter
+      - name: Run ESLint
+        run: npm run lint
