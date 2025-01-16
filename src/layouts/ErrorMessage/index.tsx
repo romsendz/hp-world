@@ -8,7 +8,10 @@ const ErrorMessage = ({ error }: ErrorMessageProps) => {
       <h6>Something went wrong while fetching data...</h6>
       <p>Please try again</p>
       <hr />
-      <p>Error: {error?.message}</p>
+      <p>
+        Error: {error?.message}
+        {error?.name}
+      </p>
     </>
   );
 };
