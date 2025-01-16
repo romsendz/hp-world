@@ -39,7 +39,9 @@ const Home = () => {
     <>
       <div className={styles.hero}>
         {/* TO BE DELETED */}
-        CURR LANG: {currentLanguage}
+        <p>Detected Language: {currentLanguage}</p>
+        <p>Normalized Language: {i18next.resolvedLanguage}</p>{" "}
+        {/* Always matches supportedLngs */}
         <br />
         {/* TO BE DELETED */}
         <h1 className={styles.hero__title}>
