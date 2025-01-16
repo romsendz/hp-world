@@ -8,6 +8,7 @@ const LanguageDrowdown = () => {
   const { i18n } = useTranslation();
   return (
     <select
+      id="language"
       className={styles.language}
       value={i18n.language}
       onChange={(e) => i18n.changeLanguage(e.target.value)}
